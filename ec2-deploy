@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'CloudFormation Template for EC2 Instance'
+
+Resources:
+  MyEC2Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+       AvailabilityZone: 'us-west-1a' # as per Cloud.io's request 
+      ImageId: 'ami-0a3c3a20c09d6f377' # Amazon Linux 2023 AMI
+      InstanceType: 't2.micro' # im using this because its free lol!
+      Tags:
+        - Key: 'Name'
+          Value: 'Jantwi' # <--- that guy is a future CTO
+      
+        
+      
+        
+
+Outputs:
+  InstanceId:
+    Description: 'Instance ID of the EC2 instance'
+    Value: !Ref JantwisEC2Instance
